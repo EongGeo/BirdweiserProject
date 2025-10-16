@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     private bool justOnce = false;
 
     public PipePool pipePool;
+    public GroundMove[] groundMoves;
 
     private void Awake()
     {
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
         move = GetComponent<PlayerMove>();
         input = GetComponent<PlayerInput>();
         data = GetComponent<PlayerData>();
-     
+
         stateMachine = new StateMachine();
         stateIdle = new StateIdle(this, stateMachine);
         stateJump = new StateJump(this, stateMachine);
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
         stateDeath = new StateDeath(this, stateMachine);
 
         pipePool = FindObjectOfType<PipePool>(); //¾À¿¡ ÀÖ´Â PipePool °¡Á®¿È
+        groundMoves = FindObjectsOfType<GroundMove>(); //¾À¿¡ÀÖ´Â ±×¶ó¿îµå¹«ºê °¡Á®¿È
     }
     void Start()
     {
