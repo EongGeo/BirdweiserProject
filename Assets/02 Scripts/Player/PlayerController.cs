@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isDeathTriggered && !justOnce)
         {
+            AudioManager.Instance.PlayHitSFX(); //죽을 때 1번 충돌소리
             justOnce = true;    //Triggered가 여러번 감지되는 것을 방지
             isDeathTriggered = false; //한번만 실행되도록 초기화
             stateMachine.ChangeState(stateDeath);
@@ -109,6 +110,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("ScoreZone"))
         {
             data.AddScore();
+            AudioManager.Instance.PlayScoreSFX();
             Debug.Log("Score: " + data.Score);
         }
     }
