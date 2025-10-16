@@ -96,6 +96,10 @@ public class PlayerController : MonoBehaviour
         {
             isDeathTriggered = true;
         }
+        if (collision.CompareTag("DeadZone"))
+        {
+            isDeathTriggered = true;
+        }
         if (collision.CompareTag("ScoreZone"))
         {
             data.AddScore();
