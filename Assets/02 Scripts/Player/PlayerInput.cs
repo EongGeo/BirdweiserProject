@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         IsClicked = Input.GetMouseButtonDown(0);
+        if (IsClicked) AudioManager.Instance.PlayJumpSFX(); //클릭시 사운드 추가(점프)
         //IsSpacePressed = Input.GetKeyDown(KeyCode.Space);
     }
 }

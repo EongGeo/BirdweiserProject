@@ -42,7 +42,7 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayHitSFX() //충돌(죽음)
     {
-        sfxSource.PlayOneShot(scoreSFX);
+        sfxSource.PlayOneShot(hitSFX);
     }
 
     public void PlayNormalBGM() //평상시
