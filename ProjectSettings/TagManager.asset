@@ -46,3 +46,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Pipe
+    uniqueID: 530882397
+    locked: 0
+  - name: Ground
+    uniqueID: 2304539059
+    locked: 0
+  - name: Player
+    uniqueID: 2476996907
+    locked: 0
