@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour
             justOnce = true;    //Triggered가 여러번 감지되는 것을 방지
             isDeathTriggered = false; //한번만 실행되도록 초기화
             stateMachine.ChangeState(stateDeath);
+
+            
         }
         stateMachine.Update();
 
