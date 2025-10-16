@@ -6,10 +6,12 @@ public class StateDeath : State
 {
     public StateDeath(PlayerController player, StateMachine stateMachine) : base(player, stateMachine) { }
 
-    
+
 
     private float waitTimeBeforeFall = 1.0f;
     private Coroutine waitTimeAndReturn;
+
+
     public override void Enter()
     {
         player.data.IsDeath = true;
@@ -23,9 +25,14 @@ public class StateDeath : State
 
         if (player.pipePool != null)
         {
-            
+
             player.pipePool.PauseAllPipes();
         }
+        foreach (var ground in player.groundMoves)
+        {
+            ground.PauseGroundMoving();
+        }
+
     }
     public override void Update() { }
     public override void FixedUpdate() { }
