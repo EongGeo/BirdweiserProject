@@ -6,6 +6,8 @@ public class StateDeath : State
 {
     public StateDeath(PlayerController player, StateMachine stateMachine) : base(player, stateMachine) { }
 
+    
+
     private float waitTimeBeforeFall = 1.0f;
     private Coroutine waitTimeAndReturn;
     public override void Enter()
@@ -18,6 +20,12 @@ public class StateDeath : State
         player.anim.CrossFadeAnim(AnimID.death, 0.5f);
         player.move.SetBodyTypeToKenematic();
         waitTimeAndReturn = player.StartCoroutine(WaitTimeAndReturnBodyType(waitTimeBeforeFall));
+
+        if (player.pipePool != null)
+        {
+            
+            player.pipePool.PauseAllPipes();
+        }
     }
     public override void Update() { }
     public override void FixedUpdate() { }

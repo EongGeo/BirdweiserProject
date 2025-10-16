@@ -36,18 +36,22 @@ public class PlayerController : MonoBehaviour
     private bool isDeathTriggered = false;
     private bool justOnce = false;
 
+    public PipePool pipePool;
+
     private void Awake()
     {
         anim = GetComponent<PlayerAnim>();
         move = GetComponent<PlayerMove>();
         input = GetComponent<PlayerInput>();
         data = GetComponent<PlayerData>();
-
+     
         stateMachine = new StateMachine();
         stateIdle = new StateIdle(this, stateMachine);
         stateJump = new StateJump(this, stateMachine);
         stateTransition = new StateTransition(this, stateMachine);
         stateDeath = new StateDeath(this, stateMachine);
+
+        pipePool = FindObjectOfType<PipePool>(); //¾À¿¡ ÀÖ´Â PipePool °¡Á®¿È
     }
     void Start()
     {

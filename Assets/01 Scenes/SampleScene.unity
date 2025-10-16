@@ -557,6 +557,7 @@ MonoBehaviour:
   jumpForceRateAtHighRise: 0.5
   lowRangeVelocityY: 1
   middleRangeVelocityY: 5
+  pipePool: {fileID: 0}
 --- !u!95 &1499641852
 Animator:
   serializedVersion: 5
