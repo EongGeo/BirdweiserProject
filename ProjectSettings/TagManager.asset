@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pipe
+  - DeadZone
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,13 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pipe
+    uniqueID: 451507327
+    locked: 0
+  - name: Ground
+    uniqueID: 318823777
+    locked: 0
+  - name: Player
+    uniqueID: 1503786825
     locked: 0

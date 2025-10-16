@@ -45,7 +45,7 @@ public class PipePool : MonoBehaviour
             return;
         }
         float minY = 5.12f - 5.4f - gapSize / 2f;   //틈새크기의 중앙y최소좌표값은 맵절반크기 - 파이프길이 - 틈새크기절반
-        float maxY = -5.12f + 5.4f + gapSize / 2f;
+        float maxY = -5.12f +2.24f+ 5.4f + gapSize / 2f; //2.24는 ground스프라이트 길이
         float gapY = Random.Range(minY, maxY);   //gapY = 틈새크기의 중앙y좌표값범위
 
 
