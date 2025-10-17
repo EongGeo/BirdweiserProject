@@ -21,6 +21,7 @@ public class GameStart : MonoBehaviour
         if (!gameStarted && Input.GetMouseButtonDown(0))
         {
             StartGame();
+            AudioManager.Instance.PlayNormalBGM();
         }
 
     }

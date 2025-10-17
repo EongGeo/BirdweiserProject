@@ -21,6 +21,7 @@ public class StateDeath : State
         player.move.DontRotate();
         player.anim.CrossFadeAnim(AnimID.death, 0.5f);
         player.move.SetBodyTypeToKenematic();
+        AudioManager.Instance.StopBGM();
         waitTimeAndReturn = player.StartCoroutine(WaitTimeAndReturnBodyType(waitTimeBeforeFall));
 
         if (player.pipePool != null)
